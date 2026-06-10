@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dependencias Federales: Límites, Gastronomía y Turismo</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,600;0,700;1,500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#f0f7ff',      /* Fondo azul claro muy suave y limpio */
+                            card: '#ffffff',       /* Tarjetas blancas puras para contraste */
+                            textDark: '#0f172a',   /* Azul marino muy oscuro para texto principal */
+                            blue: '#0284c7',       /* Azul claro brillante/celeste de acento moderno */
+                            softBlue: '#e0f2fe',   /* Azul cielo suave para fondos secundarios */
+                            accent: '#0ea5e9'      /* Azul cian para destacar elementos interactivos */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-card {
+            box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.08);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f0f7ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bae6fd;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7dd3fc;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-textDark font-sans min-h-screen overflow-x-hidden selection:bg-brand-softBlue selection:text-brand-blue">
+ 
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-sky-100 px-4 py-3 md:px-8 shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="p-2 bg-gradient-to-tr from-brand-blue to-brand-accent rounded-lg text-white">
+                    <i data-lucide="compass" class="w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                    <span class="block font-bold text-base md:text-lg text-brand-textDark">Dependencias Federales</span>
+                    <span class="block text-[10px] text-sky-600 font-medium">Soberanía e Identidad Insular</span>
+                </div>
+            </a>
+            
+            <nav id="navbar" class="flex items-center space-x-4 md:space-x-8 text-xs md:text-sm font-bold">
+                <a href="#inicio" class="nav-link py-1 text-gray-600 hover:text-brand-blue transition-colors">Inicio</a>
+                <a href="#limites" class="nav-link py-1 text-gray-600 hover:text-brand-blue transition-colors">1. Límites</a>
+                <a href="#gastronomia" class="nav-link py-1 text-gray-600 hover:text-brand-blue transition-colors">2. Gastronomía</a>
+                <a href="#turismo" class="nav-link py-1 text-gray-600 hover:text-brand-blue transition-colors">3. Turismo</a>
+            </nav>
+        </div>
+    </header>
+ 
+    <!-- MAIN WRAPPER -->
+    <main class="pt-20">
+ 
+        <!-- ================= HERO / INTRODUCCIÓN ================= -->
+        <section id="inicio" class="scroll-mt-24 min-h-[85vh] flex flex-col justify-center items-center px-4 relative overflow-hidden py-12">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[600px] h-[350px] md:h-[600px] bg-sky-100/70 rounded-full blur-[80px] pointer-events-none"></div>
+            
+            <div class="max-w-5xl text-center z-10 w-full">
+                <div class="inline-flex items-center space-x-2 bg-brand-softBlue border border-brand-blue/20 px-3 py-1.5 rounded-full mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-blue">El Caribe Venezolano en su Máxima Expresión</span>
+                </div>
+                
+                <h1 class="font-serif text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                    <span class="text-gray-500 text-xl md:text-3xl block font-sans font-light mb-1">Joyas Insulares de las</span>
+                    <span class="bg-gradient-to-r from-brand-blue via-sky-600 to-cyan-500 bg-clip-text text-transparent">Dependencias Federales</span>
+                </h1>
+                
+                <!-- Main Intro Card -->
+                <div class="bg-white border border-sky-100 rounded-3xl max-w-4xl mx-auto mb-12 overflow-hidden shadow-sm glow-card grid grid-cols-1 md:grid-cols-12 gap-0">
+                    <div class="md:col-span-5 relative h-52 md:h-auto min-h-[260px] bg-brand-softBlue">
+                        <!-- Imagen representativa del Archipiélago de Los Roques -->
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Los Roques - Dependencias Federales" class="absolute inset-0 w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent"></div>
+                    </div>
+                    <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center text-left">
+                        <p class="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+                            Las <strong class="text-brand-blue font-semibold">Dependencias Federales</strong> engloban más de 300 islas, cayos e islotes venezolanos dispersos por el Mar Caribe. Desde el paradisíaco Archipiélago de <strong class="text-brand-accent font-semibold">Los Roques</strong> hasta la estratégica Isla de Aves, estos espacios no solo delimitan las fronteras de nuestra soberanía marítima, sino que albergan una cultura gastronómica marina única y los destinos ecoturísticos más hermosos del mundo.
+                        </p>
+                    </div>
+                </div>
+ 
+                <!-- Tres Pilares Grid -->
+                <h3 class="text-sm font-extrabold text-brand-blue mb-6 uppercase tracking-wider">Ejes de la Exposición</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+                    <!-- Límites Card -->
+                    <div class="bg-white border border-sky-100 rounded-2xl shadow-sm hover:border-brand-blue/40 transition-all p-5 text-left">
+                        <div class="w-10 h-10 rounded-xl bg-sky-50 text-brand-blue flex items-center justify-center mb-3">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-textDark text-sm">1. Límites Geográficos</h4>
+                        <p class="text-xs text-gray-500 mt-1">Soberanía en el Mar Caribe. Fronteras marítimas con múltiples naciones americanas y europeas en aguas internacionales.</p>
+                    </div>
+                    <!-- Gastronomía Card -->
+                    <div class="bg-white border border-sky-100 rounded-2xl shadow-sm hover:border-brand-blue/40 transition-all p-5 text-left">
+                        <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-3">
+                            <i data-lucide="utensils"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-textDark text-sm">2. Sabores del Mar</h4>
+                        <p class="text-xs text-gray-500 mt-1">Langosta fresca, pescados autóctonos, empanadas de cazón y preparaciones culinarias de las comunidades pesqueras insulares.</p>
+                    </div>
+                    <!-- Turismo Card -->
+                    <div class="bg-white border border-sky-100 rounded-2xl shadow-sm hover:border-brand-blue/40 transition-all p-5 text-left">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center mb-3">
+                            <i data-lucide="palmtree"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-textDark text-sm">3. Potencial Turístico</h4>
+                        <p class="text-xs text-gray-500 mt-1">Ecoturismo, playas de arenas blancas coralinas, buceo de inmersión profunda, windsurf y santuarios de fauna silvestre.</p>
+                    </div>
+                </div>
+ 
+                <div class="animate-bounce">
+                    <a href="#limites" class="p-3 bg-white border border-sky-100 rounded-full inline-block hover:border-brand-blue/40 transition-all shadow-sm">
+                        <i data-lucide="arrow-down" class="w-6 h-6 text-brand-blue"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ================= LÍMITES GEOGRÁFICOS ================= -->
+        <section id="limites" class="scroll-mt-24 bg-white py-16 px-4 border-t border-sky-100 relative">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="text-center mb-10">
+                    <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">Parte 1</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-textDark">1. Fronteras y Límites de la Soberanía Insular</h2>
+                    <p class="text-gray-500 mt-2 max-w-xl mx-auto">La inmensidad territorial que expande la Zona Económica Exclusiva de Venezuela en el Caribe.</p>
+                </div>
+ 
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                    <!-- Info Histórica / Geográfica -->
+                    <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                        <div class="bg-brand-light border-2 border-brand-softBlue rounded-3xl p-6 shadow-sm">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="p-2 bg-sky-100 text-brand-blue rounded-xl">
+                                    <i data-lucide="globe"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-brand-textDark">Ubicación y Límites Estratégicos</h3>
+                            </div>
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed text-justify mb-3">
+                                Las Dependencias Federales no constituyen un estado unitario, sino un conjunto de islas dispersas. Su extensión abarca desde el **Archipiélago de Los Monjes** (frontera occidental en el Golfo de Venezuela) hasta la **Isla de Patos** en el extremo oriental cerca de Trinidad y Tobago.
+                            </p>
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed text-justify">
+                                Hacia el norte, el punto más septentrional es la **Isla de Aves**, lo que genera fronteras marítimas internacionales que limitan con aguas territoriales de los Estados Unidos (Puerto Rico), Francia (Guadalupe y Martinica), los Países Bajos (Aruba, Curazao y Bonaerense) y el Reino Unido.
+                            </p>
+                        </div>
+ 
+                        <div class="bg-sky-50/50 border border-sky-200 p-5 rounded-2xl flex items-start space-x-4">
+                            <div class="p-3 bg-white text-brand-blue rounded-xl shadow-sm shrink-0">
+                                <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs uppercase font-extrabold text-brand-blue tracking-widest block mb-1">¿Sabías qué?</span>
+                                <p class="text-xs md:text-sm text-gray-700 italic leading-relaxed">
+                                    "Gracias a la diminuta ubicación de Isla de Aves, el mapa de Venezuela se proyecta de manera gigantesca hacia el norte del mar Caribe, otorgándole al país derechos económicos sobre miles de kilómetros cuadrados de plataforma marina ricos en recursos."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Imagen de la sección Límites -->
+                    <div class="lg:col-span-6 min-h-[300px] relative rounded-3xl overflow-hidden border border-sky-100 shadow-sm bg-brand-softBlue">
+                        <!-- Imagen evocadora de islas de coral vistas desde arriba o mapa costero -->
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Islas y Aguas Territoriales" class="absolute inset-0 w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-textDark/80 via-brand-textDark/40 to-transparent p-6 text-white">
+                            <p class="text-xs font-semibold uppercase text-sky-300 tracking-wider">Patrimonio de Frontera Azul</p>
+                            <p class="text-sm font-medium mt-1">Ecosistemas costeros e islotes que actúan como guardianes geográficos de nuestra soberanía nacional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ================= GASTRONOMÍA ================= -->
+        <section id="gastronomia" class="scroll-mt-24 py-16 px-4 border-t border-sky-100 bg-brand-light">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="text-center mb-10">
+                    <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">Parte 2</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-textDark">2. Gastronomía Insular y Sabores Criollos</h2>
+                    <p class="text-gray-600 mt-3 max-w-2xl mx-auto text-sm md:text-base">
+                        La gastronomía de las dependencias está determinada directamente por la pesca artesanal diaria, combinando sazones caribeñas con frescura marina inigualable:
+                    </p>
+                </div>
+ 
+                <!-- Grid de Gastronomía con imágenes -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- Plato 1 -->
+                    <div class="bg-white border border-sky-100 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
+                        <div class="h-44 relative bg-sky-100">
+                            <!-- Imagen representativa de crustáceos o mariscos frescos -->
+                            <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&w=600&q=80" alt="Langosta de Los Roques" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-brand-blue mb-2">
+                                <i data-lucide="cookie" class="w-5 h-5"></i>
+                                <h3 class="text-lg font-bold text-brand-textDark">Langosta de Los Roques</h3>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed text-justify">
+                                Reconocida internacionalmente por su calidad. Su pesca está estrictamente regulada por temporadas para preservar la especie. Se sirve fresca, cocida a la parrilla, al ajillo o acompañada de limones locales, constituyendo el plato bandera del archipiélago.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Plato 2 -->
+                    <div class="bg-white border border-sky-100 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
+                        <div class="h-44 relative bg-sky-100">
+                            <!-- Imagen de pescado frito tradicional caribeño -->
+                            <img src="https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?auto=format&fit=crop&w=600&q=80" alt="Pescado Frito Criollo" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-brand-blue mb-2">
+                                <i data-lucide="salad" class="w-5 h-5"></i>
+                                <h3 class="text-lg font-bold text-brand-textDark">Pescado Frito y Variedades</h3>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed text-justify">
+                                Especies como el pargo, el mero, la carite y el corocoro se preparan fritos de forma crujiente, sazonados sencillamente con sal y ajo. Se sirven tradicionalmente junto a crujientes tostones de plátano verde, ensalada rallada y arepas.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Plato 3 -->
+                    <div class="bg-white border border-sky-100 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
+                        <div class="h-44 relative bg-amber-50">
+                            <!-- Imagen limpia de mariscos o caldos marinos tradicionales -->
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Consomé de Mariscos Botuto" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-brand-blue mb-2">
+                                <i data-lucide="soup" class="w-5 h-5"></i>
+                                <h3 class="text-lg font-bold text-brand-textDark">Asopados y Empanadas de Cazón</h3>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed text-justify">
+                                Los guisos elaborados a base de cazón (tiburón pequeño) sirven de relleno para las icónicas empanadas mañaneras de los pobladores. Asimismo, los asopados de mariscos surtidos y jugosos concentran toda la energía y el sabor sazonado del Caribe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ================= TURISMO ================= -->
+        <section id="turismo" class="scroll-mt-24 bg-white py-16 px-4 border-t border-sky-100">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="text-center mb-10">
+                    <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">Parte 3</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-textDark">3. Potencial Turístico y Santuarios Ecológicos</h2>
+                    <p class="text-gray-700 mt-4 max-w-4xl mx-auto text-sm md:text-base leading-relaxed text-justify md:text-center">
+                        El Parque Nacional Archipiélago de Los Roques y las demás formaciones insulares representan uno de los ecosistemas más puros del planeta, ideales para el ecoturismo responsable.
+                    </p>
+                </div>
+ 
+                <!-- Detalle Turístico Destacado -->
+                <div class="bg-gradient-to-r from-brand-softBlue/30 via-white to-brand-softBlue/30 border border-sky-100 rounded-3xl p-6 mb-12 max-w-5xl mx-auto shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-4 h-52 bg-sky-100 rounded-2xl overflow-hidden relative">
+                        <!-- Imagen de actividades turísticas como buceo o kitesurf -->
+                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=600&q=80" alt="Playas cristalinas paradisíacas" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-brand-blue/10"></div>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <span class="text-xs text-brand-blue font-bold tracking-wider uppercase block mb-1">Paraíso Terrenal</span>
+                        <h4 class="text-lg md:text-xl font-bold text-brand-textDark">Los Roques: Ecoturismo de Clase Mundial</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed mt-2 text-justify">
+                            Decretado Parque Nacional en **1972**, Los Roques resguarda el complejo arrecifal coralino más extenso del Caribe Sur. Sus famosas arenas blancas compuestas de coral pulverizado no se calientan con el sol, permitiendo caminatas agradables por cayos icónicos como Francisquí, Cayo de Agua y Madrisquí. El bajo impacto ecológico de sus posadas nativas asegura la preservación del ecosistema.
+                        </p>
+                    </div>
+                </div>
+ 
+                <!-- Grid de Atractivos Turísticos -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- Item 1 -->
+                    <div class="bg-white border border-sky-100 p-6 rounded-3xl shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 text-brand-blue mb-3">
+                                <i data-lucide="waves" class="w-5 h-5"></i>
+                                <h5 class="text-base font-bold text-brand-textDark">Buceo y Snórkel Avanzado</h5>
+                            </div>
+                            <p class="text-xs md:text-sm text-gray-600 text-justify leading-relaxed">
+                                Las aguas transparentes permiten visibilidades de hasta 30 metros de profundidad. Buceadores de todo el mundo acuden a explorar las espectaculares barreras de coral, barcos hundidos y la inmensa fauna marina que incluye tortugas y coloridos peces tropicales.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-white border border-sky-100 p-6 rounded-3xl shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 text-brand-blue mb-3">
+                                <i data-lucide="wind" class="w-5 h-5"></i>
+                                <h5 class="text-base font-bold text-brand-textDark">Kitesurf y Windsurf</h5>
+                            </div>
+                            <p class="text-xs md:text-sm text-gray-600 text-justify leading-relaxed">
+                                Los vientos alisios constantes que soplan durante casi todo el año convierten a las tranquilas lagunas insulares interiores en pistas naturales perfectas para la práctica internacional de deportes de vela y deslizamiento aerodinámico sobre el agua.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="bg-white border border-sky-100 p-6 rounded-3xl shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 text-brand-blue mb-3">
+                                <i data-lucide="bird" class="w-5 h-5"></i>
+                                <h5 class="text-base font-bold text-brand-textDark">Observación de Aves y Fauna</h5>
+                            </div>
+                            <p class="text-xs md:text-sm text-gray-600 text-justify leading-relaxed">
+                                Islas como La Orchila, Las Aves y La Blanquilla sirven de refugio temporal para decenas de especies de aves migratorias y colonias de pelícanos, alcatraces y corocoras, consolidándose como laboratorios biológicos de altísimo valor natural.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+ 
+    <!-- FOOTER -->
+    <footer class="bg-brand-textDark text-white/60 text-center py-6 border-t border-gray-800 text-xs">
+        <p>© 2026 Dependencias Federales: Exposición Educativa. Geografía, Sabores y Naturaleza Viva.</p>
+    </footer>
+
+    <!-- Inicialización de Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
