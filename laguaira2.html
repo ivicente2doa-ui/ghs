@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Guaira: De la Colonia a la Era Digital</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,600;0,700;1,500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#f0f7ff',      /* Fondo azul claro muy suave y limpio */
+                            card: '#ffffff',       /* Tarjetas blancas puras para contraste */
+                            textDark: '#0f172a',   /* Azul marino muy oscuro para texto principal */
+                            blue: '#0284c7',       /* Azul claro brillante/celeste de acento moderno */
+                            softBlue: '#e0f2fe',   /* Azul cielo suave para fondos secundarios */
+                            accent: '#0ea5e9'      /* Azul cian para destacar elementos interactivos */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-card {
+            box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.08);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f0f7ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bae6fd;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7dd3fc;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-textDark font-sans min-h-screen overflow-x-hidden selection:bg-brand-softBlue selection:text-brand-blue">
+ 
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-sky-100 px-4 py-3 md:px-8 shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="p-2 bg-gradient-to-tr from-brand-blue to-brand-accent rounded-lg text-white">
+                    <i data-lucide="anchor" class="w-5 h-5"></i>
+                </div>
+                <div class="text-left">
+                    <span class="block font-bold text-base md:text-lg text-brand-textDark">La Guaira</span>
+                    <span class="block text-[10px] text-sky-600 font-medium">Puerto Histórico e Innovación Tecnológica</span>
+                </div>
+            </a>
+            
+            <nav id="navbar" class="flex items-center space-x-4 md:space-x-8 text-xs md:text-sm font-bold">
+                <a href="#inicio" class="nav-link py-1 text-gray-600 hover:text-brand-blue transition-colors">Inicio</a>
+                <a href="#colonial" class="nav-link py-1 text-gray-600 hover:text-brand-blue transition-colors">1. Época Colonial</a>
+                <a href="#tradiciones" class="nav-link py-1 text-gray-600 hover:text-brand-blue transition-colors">2. Tradiciones</a>
+                <a href="#tecnologia" class="nav-link py-1 text-gray-600 hover:text-brand-blue transition-colors">3. Era Actual</a>
+            </nav>
+        </div>
+    </header>
+ 
+    <!-- MAIN WRAPPER -->
+    <main class="pt-20">
+ 
+        <!-- ================= HERO / INTRODUCCIÓN ================= -->
+        <section id="inicio" class="scroll-mt-24 min-h-[85vh] flex flex-col justify-center items-center px-4 relative overflow-hidden py-12">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[600px] h-[350px] md:h-[600px] bg-sky-100/70 rounded-full blur-[80px] pointer-events-none"></div>
+            
+            <div class="max-w-5xl text-center z-10 w-full">
+                <div class="inline-flex items-center space-x-2 bg-brand-softBlue border border-brand-blue/20 px-3 py-1.5 rounded-full mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-blue">Mar, Tambor y Vanguardia Digital</span>
+                </div>
+                
+                <h1 class="font-serif text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                    <span class="text-gray-500 text-xl md:text-3xl block font-sans font-light mb-1">Evolución Histórica de</span>
+                    <span class="bg-gradient-to-r from-brand-blue via-sky-600 to-cyan-500 bg-clip-text text-transparent">La Guaira</span>
+                </h1>
+                
+                <!-- Main Intro Card -->
+                <div class="bg-white border border-sky-100 rounded-3xl max-w-4xl mx-auto mb-12 overflow-hidden shadow-sm glow-card grid grid-cols-1 md:grid-cols-12 gap-0">
+                    <div class="md:col-span-5 relative h-52 md:h-auto min-h-[260px] bg-brand-softBlue">
+                        <!-- Imagen representativa de la costa costera y el mar Caribe -->
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="La Guaira: Costa y Conectividad" class="absolute inset-0 w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent"></div>
+                    </div>
+                    <div class="md:col-span-7 p-6 md:p-8 flex flex-col justify-center text-left">
+                        <p class="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+                            El estado <strong class="text-brand-blue font-semibold">La Guaira</strong> (antiguo estado Vargas) constituye la principal puerta de entrada marítima y aérea a Venezuela. Sus imponentes fortificaciones coloniales contra piratas y el vigor de sus tradiciones afrodescendientes se entrelazan hoy con una notable <strong class="text-brand-accent font-semibold">modernización tecnológica e industrial</strong>, transformando sus puertos y aduanas en ejes automatizados del comercio internacional.
+                        </p>
+                    </div>
+                </div>
+ 
+                <!-- Tres Pilares Grid -->
+                <h3 class="text-sm font-extrabold text-brand-blue mb-6 uppercase tracking-wider">Ejes de la Exposición</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+                    <!-- Colonial Card -->
+                    <div class="bg-white border border-sky-100 rounded-2xl shadow-sm hover:border-brand-blue/40 transition-all p-5 text-left">
+                        <div class="w-10 h-10 rounded-xl bg-sky-50 text-brand-blue flex items-center justify-center mb-3">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-textDark text-sm">1. Época Colonial</h4>
+                        <p class="text-xs text-gray-500 mt-1">Defensa costera, la Casa Guipuzcoana, el histórico Camino de los Españoles y el resguardo del comercio portuario nacional.</p>
+                    </div>
+                    <!-- Tradiciones Card -->
+                    <div class="bg-white border border-sky-100 rounded-2xl shadow-sm hover:border-brand-blue/40 transition-all p-5 text-left">
+                        <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center mb-3">
+                            <i data-lucide="drum"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-textDark text-sm">2. Tradiciones y Ritmos</h4>
+                        <p class="text-xs text-gray-500 mt-1">Los Tambores de San Juan, los Diablos Danzantes de Naiguatá, el Entierro de la Sardina y el folclor del litoral central.</p>
+                    </div>
+                    <!-- Tecnología Card -->
+                    <div class="bg-white border border-sky-100 rounded-2xl shadow-sm hover:border-brand-blue/40 transition-all p-5 text-left">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center mb-3">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-textDark text-sm">3. Era Tecnológica</h4>
+                        <p class="text-xs text-gray-500 mt-1">Aduanas e infraestructuras portuarias automatizadas, sistemas modernos de navegación aéreomarítima y conectividad satelital.</p>
+                    </div>
+                </div>
+ 
+                <div class="animate-bounce">
+                    <a href="#colonial" class="p-3 bg-white border border-sky-100 rounded-full inline-block hover:border-brand-blue/40 transition-all shadow-sm">
+                        <i data-lucide="arrow-down" class="w-6 h-6 text-brand-blue"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ================= ÉPOCA COLONIAL ================= -->
+        <section id="colonial" class="scroll-mt-24 bg-white py-16 px-4 border-t border-sky-100 relative">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="text-center mb-10">
+                    <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">Parte 1</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-textDark">1. Murallas, Comercio y Fortines Coloniales</h2>
+                    <p class="text-gray-500 mt-2 max-w-xl mx-auto">El enclave portuario fortificado para proteger las riquezas de la Provincia de Venezuela.</p>
+                </div>
+ 
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                    <!-- Info Histórica -->
+                    <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
+                        <div class="bg-brand-light border-2 border-brand-softBlue rounded-3xl p-6 shadow-sm">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="p-2 bg-sky-100 text-brand-blue rounded-xl">
+                                    <i data-lucide="castle"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-brand-textDark">El Resguardo de la Costa</h3>
+                            </div>
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed text-justify mb-3">
+                                Fundada formalmente en <strong>1589</strong> por el gobernador Diego de Osorio, La Guaira nació como el puerto natural de Caracas. Debido a los constantes asedios de piratas, bucaneros y armadas extranjeras, la costa se blindó con un imponente complejo defensivo que incluye el <strong>Fortín El Vigía</strong> y el <strong>Castillo de San Carlos</strong>.
+                            </p>
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed text-justify">
+                                En su casco histórico destaca la **Real Compañía Guipuzcoana (1728)**, corporación que monopolizaba el comercio de cacao y tabaco. Desde allí partía el célebre **Camino de los Españoles**, una vía empedrada que cruzaba la montaña para conectar el puerto con el valle de Caracas.
+                            </p>
+                        </div>
+ 
+                        <div class="bg-sky-50/50 border border-sky-200 p-5 rounded-2xl flex items-start space-x-4">
+                            <div class="p-3 bg-white text-brand-blue rounded-xl shadow-sm shrink-0">
+                                <i data-lucide="ship" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs uppercase font-extrabold text-brand-blue tracking-widest block mb-1">¿Sabías qué?</span>
+                                <p class="text-xs md:text-sm text-gray-700 italic leading-relaxed">
+                                    "Los fortines coloniales de La Guaira se comunicaban estratégicamente con Caracas mediante un ingenioso sistema de banderas y fogatas visuales a lo largo del Ávila, alertando en minutos sobre cualquier barco enemigo en el horizonte."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Imagen de la sección Colonial -->
+                    <div class="lg:col-span-6 min-h-[300px] relative rounded-3xl overflow-hidden border border-sky-100 shadow-sm bg-brand-softBlue">
+                        <!-- Imagen evocadora de fortificaciones antiguas de piedra frente al mar -->
+                        <img src="https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=800&q=80" alt="Fortificaciones y Baterías de la Colonia" class="absolute inset-0 w-full h-full object-cover" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-brand-textDark/80 via-brand-textDark/40 to-transparent p-6 text-white">
+                            <p class="text-xs font-semibold uppercase text-sky-300 tracking-wider">Arquitectura de Defensa Marítima</p>
+                            <p class="text-sm font-medium mt-1">Baluartes históricos que sirvieron de centinelas de piedra frente a las aguas del Caribe central.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ================= TRADICIONES ================= -->
+        <section id="tradiciones" class="scroll-mt-24 py-16 px-4 border-t border-sky-100 bg-brand-light">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="text-center mb-10">
+                    <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">Parte 2</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-textDark">2. Fiestas Populares y Sincretismo Tradicional</h2>
+                    <p class="text-gray-600 mt-3 max-w-2xl mx-auto text-sm md:text-base">
+                        La cultura de La Guaira resuena fuertemente con raíces africanas e hispanas, manifestadas en fiestas rítmicas llenas de devoción e identidad costera:
+                    </p>
+                </div>
+ 
+                <!-- Grid de Tradiciones con imágenes -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- Tradición 1 -->
+                    <div class="bg-white border border-sky-100 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
+                        <div class="h-44 relative bg-sky-100">
+                            <!-- Imagen representativa de percusión y ritmo alegre -->
+                            <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=600&q=80" alt="Tambores de San Juan" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-brand-blue mb-2">
+                                <i data-lucide="music" class="w-5 h-5"></i>
+                                <h3 class="text-lg font-bold text-brand-textDark">Los Tambores de San Juan</h3>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed text-justify">
+                                Cada 24 de junio, los pueblos de Naiguatá, Caraballeda y Tarmas retumban al ritmo del tambor cumaco y las guaruras. Esta festividad religiosa combina la devoción al santo con bailes enérgicos y cantos tradicionales, siendo una de las expresiones folclóricas más potentes de la región.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tradición 2 -->
+                    <div class="bg-white border border-sky-100 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
+                        <div class="h-44 relative bg-sky-100">
+                            <!-- Imagen festiva que evoca color, máscaras y disfraces tradicionales -->
+                            <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&q=80" alt="Diablos Danzantes de Naiguatá" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-brand-blue mb-2">
+                                <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                <h3 class="text-lg font-bold text-brand-textDark">Diablos Danzantes de Naiguatá</h3>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed text-justify">
+                                Celebrados durante el Corpus Christi, destacan por la confección artesanal de máscaras inspiradas en animales marinos y trajes pintados a mano llenos de círculos de colores. Es un rito tradicional de fe donde el bien triunfa pacíficamente sobre el mal.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tradición 3 -->
+                    <div class="bg-white border border-sky-100 rounded-3xl overflow-hidden shadow-sm flex flex-col justify-between">
+                        <div class="h-44 relative bg-amber-50">
+                            <!-- Imagen limpia evocadora de juegos, redes o elementos tradicionales del mar -->
+                            <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=600&q=80" alt="Juegos Tradicionales y Mar" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 text-brand-blue mb-2">
+                                <i data-lucide="package" class="w-5 h-5"></i>
+                                <h3 class="text-lg font-bold text-brand-textDark">Entierro de la Sardina</h3>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed text-justify">
+                                Tradición popular que marca el cierre del carnaval el Miércoles de Ceniza. Los guaireños organizan un divertido simulacro de cortejo fúnebre para enterrar una sardina hecha de cartón y paja, simbolizando la purificación y el inicio de los ciclos de pesca prósperos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- ================= ÉPOCA ACTUAL Y TECNOLOGÍA ================= -->
+        <section id="tecnologia" class="scroll-mt-24 bg-white py-16 px-4 border-t border-sky-100">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="text-center mb-10">
+                    <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">Parte 3</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-2 text-brand-textDark">3. Infraestructura y Modernización Tecnológica</h2>
+                    <p class="text-gray-700 mt-4 max-w-4xl mx-auto text-sm md:text-base leading-relaxed text-justify md:text-center">
+                        Como portal logístico del territorio nacional, La Guaira lidera la adopción de tecnologías de automatización aduanera, navegación por satélite y conectividad de transporte a gran escala.
+                    </p>
+                </div>
+ 
+                <!-- Detalle Tecnológico Moderno -->
+                <div class="bg-gradient-to-r from-brand-softBlue/30 via-white to-brand-softBlue/30 border border-sky-100 rounded-3xl p-6 mb-12 max-w-5xl mx-auto shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-4 h-52 bg-sky-100 rounded-2xl overflow-hidden relative">
+                        <!-- Imagen de redes de datos logísticos y tecnología global -->
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Automatización Portuaria Logística" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-brand-blue/10"></div>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <span class="text-xs text-brand-blue font-bold tracking-wider uppercase block mb-1">Vanguardia Logística Nacional</span>
+                        <h4 class="text-lg md:text-xl font-bold text-brand-textDark">Automatización en Puertos y Terminales Aéreos</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed mt-2 text-justify">
+                            La Guaira es el eje de la modernización aduanera del país. El Puerto de La Guaira y el Aeropuerto Internacional de Maiquetía integran avanzados sistemas informáticos para el escaneo, control de contenedores y procesamiento digital de mercancías en tiempo real. Esta automatización reduce los tiempos logísticos y posiciona al litoral central como un nodo de alta eficiencia comercial.
+                        </p>
+                    </div>
+                </div>
+ 
+                <!-- Grid de Innovación -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- Item 1 -->
+                    <div class="bg-white border border-sky-100 p-6 rounded-3xl shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 text-brand-blue mb-3">
+                                <i data-lucide="plane" class="w-5 h-5"></i>
+                                <h5 class="text-base font-bold text-brand-textDark">Control Aéreo por Satélite</h5>
+                            </div>
+                            <p class="text-xs md:text-sm text-gray-600 text-justify leading-relaxed">
+                                El principal aeropuerto del país cuenta con modernas plataformas de gestión de tráfico aéreo y radares de navegación satelital digitalizada, optimizando la seguridad operativa de vuelos nacionales e internacionales las 24 horas del día.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="bg-white border border-sky-100 p-6 rounded-3xl shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 text-brand-blue mb-3">
+                                <i data-lucide="wifi" class="w-5 h-5"></i>
+                                <h5 class="text-base font-bold text-brand-textDark">Turismo Inteligente y Conectividad</h5>
+                            </div>
+                            <p class="text-xs md:text-sm text-gray-600 text-justify leading-relaxed">
+                                La franja costera e importantes zonas hoteleras y comerciales implementan redes inalámbricas de alta velocidad y pasarelas de pago electrónico inmediato, modernizando los servicios para turistas y facilitando el comercio local en la costa.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="bg-white border border-sky-100 p-6 rounded-3xl shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 text-brand-blue mb-3">
+                                <i data-lucide="activity" class="w-5 h-5"></i>
+                                <h5 class="text-base font-bold text-brand-textDark">Sistemas de Monitoreo Marítimo</h5>
+                            </div>
+                            <p class="text-xs md:text-sm text-gray-600 text-justify leading-relaxed">
+                                Se aplican herramientas informáticas de telemetría y sensores marinos avanzados para el monitoreo climatológico de las corrientes, optimizando tanto la seguridad de los pesqueros artesanales como la navegación de los buques de gran calado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+    </main>
+ 
+    <!-- FOOTER -->
+    <footer class="bg-brand-textDark text-white/60 text-center py-6 border-t border-gray-800 text-xs">
+        <p>© 2026 La Guaira: Exposición Educativa. Tradición e Innovación de la mano.</p>
+    </footer>
+
+    <!-- Inicialización de Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
